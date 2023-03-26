@@ -86,8 +86,8 @@ def test_epoch(model, test_iter):
     return preds, precision, recall, ic, rank_ic, ir
 
 def train_valid_test(df_train, df_valid, df_test):
-    lr = 0.1
-    num_epoch = 20
+    lr = 0.01
+    num_epoch = 200
     loss = nn.MSELoss()
     params = list(product([5, 10, 15], [64, 128]))
     scores = []
